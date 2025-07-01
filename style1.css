@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+
+#navbar {
+  background-color: #0f1111;
+  height: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  gap: 20px;
+}
+
+#alogo {
+  background-image: url('amazon.png');
+  height: 50px;
+  width: 130px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+#location,
+#account,
+#returns,
+#cart,
+#lang,
+.all {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#location i,
+#cart i,
+#lang i,
+#account i {
+  font-size: 16px;
+}
+
+#prime i {
+  font-size: 12px;
+}
+
+#account p,
+#returns p,
+#cart span {
+  font-size: 12px;
+  color: white;
+  line-height: 1.2;
+}
+
+#searchbar {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+#searchbar:hover {
+  border: 2px solid #f8bd19;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+#one {
+  background-color: #ddd;
+  padding: 8px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  color: black;
+  height: 40px;
+}
+
+#two {
+  flex-grow: 1;
+}
+
+#two input {
+  padding: 8px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  height: 40px;
+}
+
+#three button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #efb30d;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  cursor: pointer;
+  height: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.lang-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: #111;
+}
+
+
+#bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  height: 39px;
+  background-color: #232f3e;
+  color: white;
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+#bar .bar-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.banner {
+  position: relative;
+  height: 300px;
+  background-image: url('a3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0px;
+  margin-top: 0px; 
+}
+
+
+.main-container {
+  background-color: #e2e7e6;
+  padding-bottom: 40px;
+}
+
+.shopping-list {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: transparent;
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
+}
+
+
+.shopping-list2 {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: #e2e7e6;
+  padding: 20px 0;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+
+.box {
+  background-color: white;
+  width: 23%;
+  height: 400px;
+  padding: 20px 15px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.box h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.box-img {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+}
+
+.shopping-list p,
+.shopping-list2 p {
+  font-size: 14px;
+  color: #007185;
+  cursor: pointer;
+  transition: text-decoration 0.2s ease;
+}
+
+.shopping-list p:hover,
+.shopping-list2 p:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .box {
+    width: 48%;
+  }
+}
+
+@media (max-width: 480px) {
+  .box {
+    width: 100%;
+  }
+}
+footer {
+  color: white;
+  padding-top: 20px;
+  margin-top: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  text-align: center;
+  padding: 10px;
+  background-color: #37475a;
+  cursor: pointer;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px 10%;
+  
+  background-color: #232f3e;
+}
+
+.column {
+  min-width: 180px;
+  margin-bottom: 20px;
+}
+
+.column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.column a {
+  display: block;
+  color: #ddd;
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.column a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.footer-logo img {
+  width: 120px;
+  height: auto;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  background-color: #131a22;
+}
+
+
