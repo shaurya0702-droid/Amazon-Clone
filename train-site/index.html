@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Where is my Train – Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/train.svg" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden>🚆</span>
+      <a class="brand-name" href="./">Where is my Train</a>
+    </div>
+
+    <div class="header-actions">
+      <a class="ghost-button" href="dss.html">Go to AI Decision Support System →</a>
+      <div class="langs-clock">
+        <button class="ghost-button sm" id="langBtn" aria-label="language">EN</button>
+        <span class="divider"></span>
+        <time id="clock" class="clock">--:--</time>
+      </div>
+    </div>
+  </header>
+
+  <main class="page find-page">
+    <nav class="toggle-nav" role="tablist" aria-label="Primary">
+      <button class="tab active" data-tab="find" aria-selected="true" role="tab">🔎 Find Trains</button>
+      <button class="tab" data-tab="track" role="tab" aria-selected="false">📍 Track Train</button>
+    </nav>
+
+    <section class="card search-card" id="findTab" role="tabpanel" aria-labelledby="find">
+      <form id="findForm" class="search-form" autocomplete="off">
+        <div class="field from">
+          <label for="fromStation">From</label>
+          <div class="input with-icon">
+            <span class="icon" aria-hidden>📍</span>
+            <input id="fromStation" name="from" placeholder="Select departure station" required />
+          </div>
+        </div>
+        <button type="button" class="swap" id="swapBtn" title="Swap">↔</button>
+        <div class="field to">
+          <label for="toStation">To</label>
+          <div class="input with-icon">
+            <span class="icon" aria-hidden>📍</span>
+            <input id="toStation" name="to" placeholder="Select destination station" required />
+          </div>
+        </div>
+        <button type="submit" class="primary">🔎 Search</button>
+      </form>
+
+      <div id="results" class="results" hidden></div>
+    </section>
+
+    <section class="card track-card hidden" id="trackTab" role="tabpanel" aria-labelledby="track">
+      <form id="trackForm" class="track-form">
+        <div class="field grow">
+          <label for="trainNumber">Train Number</label>
+          <input id="trainNumber" placeholder="e.g., 12345" required />
+        </div>
+        <button type="submit" class="primary">Track</button>
+      </form>
+      <div id="trackResult" class="results" hidden></div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>© <span id="year"></span> Where is my Train — Demo UI</p>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

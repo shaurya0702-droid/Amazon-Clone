@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI-Powered Train Traffic DSS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/train.svg" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-icon" aria-hidden>🚆</span>
+      <a class="brand-name" href="index.html">Where is my Train</a>
+    </div>
+    <div class="header-actions">
+      <span class="status-pill success">Online Status</span>
+      <div class="langs-clock">
+        <button class="ghost-button sm" id="langBtn" aria-label="language">EN</button>
+        <span class="divider"></span>
+        <time id="clock" class="clock">--:--</time>
+      </div>
+    </div>
+  </header>
+
+  <main class="page dss-page">
+    <header class="page-title">
+      <h1>AI-Powered Train Traffic Decision Support System</h1>
+      <p class="sub">Indian Railways Server Connected: Delhi2024</p>
+    </header>
+
+    <nav class="toggle-nav" role="tablist">
+      <button class="tab active" data-tab="live">Live Recommendations</button>
+      <button class="tab" data-tab="conflicts">Ward of Conflicts</button>
+      <button class="tab" data-tab="insights">KPIs & Insights</button>
+      <button class="tab" data-tab="logs">Decision Logs</button>
+    </nav>
+
+    <section class="card" id="liveTab">
+      <div class="card-header with-icon">
+        <span class="icon">⚡</span>
+        <div>
+          <h2>Live Recommendations</h2>
+          <p class="muted">AI-generated plausible optimization recommendations for train management</p>
+        </div>
+      </div>
+
+      <div class="alert danger">
+        <div class="alert-title">Active ConflictsOversize</div>
+        <div class="alert-body">3 main urgent predictions require route trained section</div>
+      </div>
+
+      <h3 class="section-title">Recommended Actions</h3>
+
+      <div class="recommendations" id="recommendations"></div>
+    </section>
+
+    <section class="card hidden" id="conflictsTab">
+      <h2>Ward of Conflicts</h2>
+      <p class="muted">No conflicts at the moment.</p>
+    </section>
+
+    <section class="card hidden" id="insightsTab">
+      <h2>KPIs & Insights</h2>
+      <div class="grid kpis">
+        <div class="kpi">
+          <div class="kpi-value">97%</div>
+          <div class="kpi-label">On-Time Confidence</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value">12m</div>
+          <div class="kpi-label">Potential Delay Saved</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-value">152</div>
+          <div class="kpi-label">Trains Active</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card hidden" id="logsTab">
+      <h2>Decision Logs</h2>
+      <ul class="logs" id="logs"></ul>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>© <span id="year"></span> Where is my Train — Demo UI</p>
+  </footer>
+
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
