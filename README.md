@@ -24,7 +24,11 @@ cd Amazon-Clone
 Open `index.html` in your browser
 
 ## Screenshots
-Add screenshots of your homepage and key sections here for better presentation.
+
+### Homepage
+![Homepage Screenshot](https://github.com/shaurya0702-droid/Amazon-Clone/blob/main/output1.jpg)
+![Homepage Screenshot](https://github.com/shaurya0702-droid/Amazon-Clone/blob/main/output2.jpg)
+![Homepage Screenshot](https://github.com/shaurya0702-droid/Amazon-Clone/blob/main/output3.jpg)
 
 ## Lessons
 - Practiced semantic HTML and CSS layout skills
